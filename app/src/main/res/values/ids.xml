@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="username" type="id" />
+    <item name="password" type="id" />
+    <item name="name" type="id" />
+    <item name="contact" type="id" />
+    <item name="dob" type="id" />
+    <item name="btnInsert" type="id" />
+    <item name="btnUpdate" type="id" />
+    <item name="btnDelete" type="id" />
+    <item name="btnView" type="id" />
+    <item name="btnclear" type="id" />
+    <item name="login" type="id" />
+</resources>

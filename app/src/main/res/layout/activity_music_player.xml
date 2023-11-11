@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_height="80dp"
+        android:text="Music Player"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:fontFamily="@font/abel"
+        android:textStyle="bold"
+        android:textColor="#FAFAE6"
+        android:id="@+id/idTVHeading"/>
+
+    <VideoView
+        android:id="@+id/idvideoView"
+        android:layout_below="@id/idTVHeading"
+        android:layout_width="350dp"
+        android:layout_height="450dp"
+
+        android:layout_marginTop="0dp"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/idsongTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idvideoView"
+        android:gravity="center"
+        android:fontFamily="@font/abel"
+        android:text="Song Title"
+        android:textColor="#FAFAE6"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="26dp" />
+
+    <TextView
+        android:id="@+id/idsingerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idsongTitle"
+        android:gravity="center"
+        android:fontFamily="@font/abel"
+        android:textStyle="italic"
+        android:text="Singer Name"
+        android:textColor="#FBFAE6"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp" />
+
+    <SeekBar
+        android:id="@+id/idSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idsingerName"
+        android:layout_marginTop="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:thumb="@drawable/seek_thumb"
+        android:thumbTint="@color/white"
+
+
+        />
+
+    <LinearLayout
+        android:id="@+id/idcontrolLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idsingerName"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="65dp">
+
+
+
+        <ImageButton
+            android:id="@+id/idpreviousButton"
+            android:layout_below="@id/idSeekBar"
+            android:layout_width="56dp"
+            android:layout_height="100dp"
+            android:tint="@color/teal_200"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/ic_previous"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:contentDescription="Previous Song" />
+
+        <ImageButton
+            android:id="@+id/idplayPauseButton"
+            android:layout_width="72dp"
+            android:layout_height="92dp"
+            android:tint="@color/teal_200"
+            android:src="@drawable/ic_play"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:contentDescription="Play/Pause" />
+
+        <ImageButton
+            android:id="@+id/idnextButton"
+            android:layout_width="56dp"
+            android:layout_height="96dp"
+            android:tint="@color/teal_200"
+            android:src="@drawable/ic_next"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:contentDescription="Next Song" />
+    </LinearLayout>
+</RelativeLayout>

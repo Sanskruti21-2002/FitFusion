@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+
+    tools:context=".ReminderPageActivity">
+
+    <TimePicker
+        android:id="@+id/idTimePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idLL"
+        android:layout_marginTop="20dp"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idLL"
+        android:layout_below="@id/idTimePicker"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/idDescription"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+
+            android:hint="Description"
+            />
+        <ImageButton
+            android:src="@drawable/id_add"
+            android:id="@+id/idAdd"
+            android:layout_toRightOf="@id/idDescription"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:tint="@color/black"
+            android:background="@color/teal_200"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

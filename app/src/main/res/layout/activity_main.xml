@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/idProfileIcon"
+        android:layout_width="48dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/ic_baseline_account_circle_24" />
+
+    <TextView
+        android:id="@+id/idTVHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/abel"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:padding="10dp"
+        android:text="Fit Fusion App"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/idTVSubHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idTVHeading"
+        android:fontFamily="@font/abel"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:padding="8dp"
+        android:text="Welcome to Fit Fusion"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/idLLUpper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idTVSubHeading"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/idLLExercise"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#64D2FF">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/idLAVExercise"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:lottie_loop="true"
+                app:lottie_autoPlay="true" />
+
+        </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/abel"
+                android:padding="8dp"
+                android:text="See Exercise "
+
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <!--This linear layout for step counter-->
+        <LinearLayout
+            android:id="@+id/idLLStepCounter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="#8944AB">
+            <!--  for lottie animation -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/idLAVStepCounter"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                app:lottie_autoPlay="true" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/abel"
+                android:padding="8dp"
+                android:text="Step Counter"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/idLLMUSIC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idLLUpper"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="0dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/idLLMusicPlayer"
+            android:orientation="vertical"
+            android:layout_margin="4dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="#5856D6">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                app:lottie_autoPlay="true"
+                android:id="@+id/idLAVPlayer" />
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Play Music"
+                android:textAlignment="center"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:fontFamily="@font/abel"
+                android:textStyle="bold"
+                android:textSize="18dp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/idLLReminder"
+            android:orientation="vertical"
+            android:layout_margin="4dp">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="#FDA4BA">
+            <!--  for lottie animation -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                app:lottie_autoPlay="true"
+                android:id="@+id/idLAVReminder" />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Set Reminders"
+                android:textAlignment="center"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:fontFamily="@font/abel"
+                android:textStyle="bold"
+                android:textSize="18dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idLLMUSIC"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:id="@+id/button"
+
+        android:layout_marginTop="10dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/idLLWater"
+            android:orientation="vertical"
+            android:layout_margin="4dp">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="#ADDAC5">
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                app:lottie_autoPlay="true"
+                android:id="@+id/idLAVWater" />
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Water Reminder"
+                android:textAlignment="center"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:fontFamily="@font/abel"
+                android:textStyle="bold"
+                android:textSize="18dp" />
+
+
+        </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/idLLDiet"
+                    android:orientation="vertical"
+                    android:layout_margin="4dp">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardBackgroundColor="#FF375F">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        app:lottie_autoPlay="true"
+                        android:id="@+id/idLAVDiet" />
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Diet Plans"
+                        android:textAlignment="center"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/abel"
+                        android:textStyle="bold"
+                        android:textSize="18dp" />
+                </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
